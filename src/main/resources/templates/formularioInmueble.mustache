@@ -1,0 +1,46 @@
+{{#layout}}
+    <div class="container">
+        <h1>Formulario de Inmuebles</h1>
+        <form id="inmuebleForm">
+            <label for="tipo-inmueble">Tipo de Inmueble:</label>
+            <select id="tipo-inmueble" name="tipo-inmueble" onchange="mostrarCamposEspecificos()">
+                <option value="">Seleccionar</option>
+                <option value="casa">Casa</option>
+                <option value="ph">PH</option>
+                <option value="depto">Depto</option>
+            </select>
+
+            <div id="campos-adicionales" style="display: none;">
+                <label for="cantHabitaciones">Número de Habitaciones:</label>
+                <input type="number" id="cantHabitaciones" name="cantHabitaciones" required>
+
+                <label for="tamanioEnM2">Superficie (m²):</label>
+                <input type="number" id="tamanioEnM2" name="tamanioEnM2" required>
+
+                <label id="labelPrecio" style="display: none;" for="Precio">Precio:</label>
+                <input id="inputPrecio" style="display: none;" type="number" name="Precio" required>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script>
+        function mostrarCamposEspecificos() {
+            const tipoInmueble = document.getElementById('tipo-inmueble').value;
+            const camposAdicionales = document.getElementById('campos-adicionales');
+            const labelPrecio = document.getElementById('labelPrecio');
+            const inputPrecio = document.getElementById('inputPrecio');
+
+            camposAdicionales.style.display = 'block';
+
+            if (tipoInmueble === "casa") {
+                labelPrecio.style.display = "";
+                inputPrecio.style.display = "";
+            } else {
+                labelPrecio.style.display = "none";
+                inputPrecio.style.display = "none";
+            }
+        }
+    </script>
+{{/layout}}
+{{>layout}}

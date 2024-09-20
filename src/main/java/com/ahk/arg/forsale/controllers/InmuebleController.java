@@ -4,6 +4,7 @@ import com.ahk.arg.forsale.models.entities.Casa;
 import com.ahk.arg.forsale.models.entities.Inmueble;
 import com.ahk.arg.forsale.models.entities.Zona;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -35,5 +36,11 @@ public class InmuebleController {
         model.put("title", "Inmuebles epicos");
         model.put("inmuebles", this.inmuebles);
         return new ModelAndView("inmuebles", model);
+    }
+
+    @GetMapping("/formulario-tipo-de-inmueble")
+    public ModelAndView formularioTipoDeInmuebles(Map<String, Object> model){
+        model.put("title", "Formulario tipo de inmueble");
+        return new ModelAndView("formularioInmueble", model);
     }
 }
