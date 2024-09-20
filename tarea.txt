@@ -1,0 +1,10 @@
+Hay que crear el ABML de los inmuebles
+listado de Inmuebles -> 
+Pantalla para preguntar que quiere crear -> Casa, depto o PH
+
+En el controller de inmuebles van a necesitar crear 3 métodos anotados con POST MAPPING
+Por ejemplo 
+/casa/crear
+/ph/crear
+/depto/crear
+lo que varia en cada uno de estos métodos es el parámetro anotado con modelattribute
