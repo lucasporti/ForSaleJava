@@ -1,10 +1,21 @@
-Hay que crear el ABML de los inmuebles
-listado de Inmuebles -> 
-Pantalla para preguntar que quiere crear -> Casa, depto o PH
+en inmueble nueva columna html tipo de vivienda
+para que funcione en clase inmueble -> metodo abstracto tipo() devuelve string
+cada clase hija redefinimos el metodo y tire casa, ph, depto, etc
 
-En el controller de inmuebles van a necesitar crear 3 métodos anotados con POST MAPPING
-Por ejemplo 
-/casa/crear
-/ph/crear
-/depto/crear
-lo que varia en cada uno de estos métodos es el parámetro anotado con modelattribute
+ese metodo llamamos desde la vista
+
+exactamente lo mismo pero para la operación y el estado
+
+agregar dos columnas más al listado
+uno para reservar otro para concretar
+ambos botones te llevan a una nueva pantalla
+que nos permiten seleccionar empleado y cliente
+y hacer el post correspondiente
+
+primero crear los botones y el href
+
+segundo crear las paginas
+
+tercero crear los controladores para redirigir a las paginas
+
+controller hardcodeados los inmuebles, le agregamos un id

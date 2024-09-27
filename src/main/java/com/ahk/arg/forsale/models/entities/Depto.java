@@ -8,4 +8,8 @@ public class Depto extends Inmueble{
     public float precio() {
         return Float.valueOf(350000 * super.cantAmbientes);
     }
+
+    public String tipo(){
+        return "Depto";
+    }
 }

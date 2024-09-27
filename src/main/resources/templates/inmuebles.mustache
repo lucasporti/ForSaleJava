@@ -3,17 +3,29 @@
         <h1>Listado de Inmuebles</h1>
         <table>
             <tr>
+                <th>Id</th>
                 <th>Zona</th>
                 <th>Cantidad de Ambientes</th>
                 <th>Tamaño (m²)</th>
+                <th>Tipo</th>
+                <th>Operacion</th>
+                <th>Estado</th>
+                <th>Concretar</th>
+                <th>Reservar</th>
             </tr>
             </thead>
             <tbody>
             {{#inmuebles}}
                 <tr>
+                    <td>{{id}}</td>
                     <td>{{zona.nombre}}</td>
                     <td>{{cantAmbientes}}</td>
                     <td>{{tamanioEnM2}}</td>
+                    <td> {{tipo}}</td>
+                    <td>{{operacion.tipo}}</td>
+                    <td>{{operacion.estado.tipo}}</td>
+                    <td><a href="/inmuebles/{{id}}/concretar">Concretar</a></td>
+                    <td><a href="/inmuebles/{{id}}/reservar">Reservar</a></td>
                 </tr>
             {{/inmuebles}}
             </tbody>

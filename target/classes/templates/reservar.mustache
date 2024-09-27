@@ -1,0 +1,24 @@
+{{#layout}}
+    <div class="container">
+        <h1>Formulario para reservar</h1>
+        <form method="POST" action="/inmuebles/{{id}}/reservar">
+            <label for="empleado">Seleccionar Empleado:</label>
+
+            <select id="empleado" name="empleado">
+                {{# empleados}}
+                <option value="{{id}}">{{nombre}}</option>
+                {{/ empleados}}
+            </select>
+
+            <label for="cliente">Seleccionar Cliente:</label>
+            <select id="cliente" name="cliente">
+                {{# clientes}}
+                <option value="{{id}}">{{nombre}}</option>
+                {{/ clientes}}
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+{{/layout}}
+{{>layout}}

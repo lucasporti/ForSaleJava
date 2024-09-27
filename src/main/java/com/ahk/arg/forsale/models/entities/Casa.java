@@ -12,4 +12,8 @@ public class Casa extends Inmueble {
     public float precio() {
         return this.valor;
     }
+
+    public String tipo(){
+        return "Casa";
+    }
 }

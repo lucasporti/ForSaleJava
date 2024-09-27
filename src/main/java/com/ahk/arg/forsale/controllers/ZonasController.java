@@ -35,7 +35,6 @@ public class ZonasController {
         otraZona.setPrecio(1200F);
 
         this.zonas.add(otraZona);
-
     }
 
     @GetMapping

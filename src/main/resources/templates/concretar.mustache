@@ -1,0 +1,25 @@
+{{#layout}}
+    <div class="container">
+        <h1>Formulario para concretar</h1>
+        <form method="POST" action="/inmuebles/{{id}}/concretar">
+            <label for="empleado">Seleccionar Empleado:</label>
+
+            <select id="empleado" name="empleado_id">
+                {{# empleados}}
+                <option value="{{id}}">{{nombre}}</option>
+                {{/ empleados}}
+            </select>
+
+            <label for="cliente">Seleccionar Cliente:</label>
+            <select id="cliente" name="cliente_id">
+                {{# clientes}}
+                <option value="{{id}}">{{nombre}}</option>
+                {{/ clientes}}
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+{{/layout}}
+
+{{>layout}}

@@ -48,7 +48,7 @@ public class FormularioController {
         // Asignar un ID único (esto es solo un ejemplo, considera usar una lógica más robusta)
         nuevaZona.setId(this.zonas.size() + 1);
 
-        .zonas.add(nuevaZona);
+        this.zonas.add(nuevaZona);
 
         return "redirect:/zonas"; // Redirige al listado de zonas después de procesar el formulario
     }

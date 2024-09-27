@@ -7,4 +7,7 @@ public class PH extends Inmueble{
         // Super hace referencia a la clase padre
         return 500000 + 14000 * super.tamanioEnM2;
     }
+    public String tipo(){
+        return "PH";
+    }
 }
